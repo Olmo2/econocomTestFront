@@ -1,0 +1,15 @@
+{
+  "footer": {
+    "language": "LANGUE:"
+  },
+  "login": {
+    "altSubmit": "SE CONNECTER AVEC DECATHLON",
+    "email": "E-mail",
+    "forgot": "Vous n'avez pas de compte ?",
+    "password": "Mot de passe",
+    "register": "S'inscrire",
+    "submit": "SE CONNECTER",
+    "title": "Connectez-vous à votre compte",
+    "ways": "Autres moyens d'accès :"
+  }
+}

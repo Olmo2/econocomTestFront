@@ -1,0 +1,70 @@
+.main{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+height: 100%;
+
+}
+
+.logoLogin{
+    background-color: lightgray;
+    grid-area: 1 / 1 / 6 / 3;
+}
+.logoLogin svg{
+    margin-left: 7rem;
+}
+
+.formLogin{       
+    grid-area: 1 / 3 / 6 / 4;
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;*/
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(7, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+.formLogin form{
+   /* margin-top: 3rem;*/
+   width: 20rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.formLogin .body{
+   grid-area: 2 / 2 / 6 / 4; 
+}
+
+.formButton{
+    border-radius: 0;
+    width: 20rem;
+    /*background-color: #ff6c00;*/
+}
+
+a{
+    color: #FF6C00;
+}
+
+
+footer{
+   grid-area: 7 / 1 / 8 / 5;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.footerDropdown{
+ grid-area: 1 / 1 / 2 / 2;
+}
+.footerImg{
+grid-area: 1 / 3 / 2 / 4; 
+}
