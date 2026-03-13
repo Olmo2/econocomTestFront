@@ -40,7 +40,10 @@ export class Login {
   passwordVisible: boolean = false;
 
   loginForm = new FormGroup({
-    username: new FormControl('', [Validators.required]),
+    username: new FormControl('', [
+      Validators.required,
+      Validators.email
+    ]),
     password: new FormControl('', [Validators.required])
   });
 
