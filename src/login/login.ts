@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import {  ReactiveFormsModule } from '@angular/forms';
+import {  ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -31,11 +31,9 @@ import { CommonModule } from '@angular/common';
 })
 export class Login {
   loginForm = new FormGroup({
-    username: new FormControl(''),
-    password: new FormControl('')
+    username: new FormControl('', [Validators.required]),
+    password: new FormControl('', [Validators.required])
   });
-
-  passwordVisible: boolean = false;
 
   languages: any[] = [
     {code: 'ES', value: 'es'},
@@ -49,6 +47,10 @@ export class Login {
     translate.use(this.languageSelected);
   }
 
+  passwordVisible: boolean = false;
+  changePasswordVisible() {
+  this.passwordVisible = !this.passwordVisible;
+}
   changeLanguage(language: string) {
     this.translate.use(language);
   }

@@ -2479,6 +2479,9 @@
                     <mat-label>{{ 'login.password' | translate }}</mat-label>
                     <input name="password" formControlName="password" matInput
                         [type]="passwordVisible ? 'text' : 'password'">
+                    <button mat-icon-button matSuffix type="button" (click)="changePasswordVisible()">
+                        <mat-icon>{{ passwordVisible ? 'visibility_off' : 'visibility' }}</mat-icon>
+                    </button>
                 </mat-form-field>
                 <button class="formButton" matButton="filled" style="background-color: #ff6c00;">{{ 'login.submit' |
                     translate }}</button>
@@ -2487,7 +2490,8 @@
             <aside>
                 <p>{{ 'login.ways' | translate }}
                 </p>
-                <button class="formButton" matButton="filled" style="background-color: #3643ba;">{{'login.altSubmit' | translate }}</button>
+                <button class="formButton" matButton="filled" style="background-color: #3643ba;">{{'login.altSubmit' |
+                    translate }}</button>
                 <p>{{ 'login.forgot' | translate }} <a href="#">{{ 'login.register' | translate }}</a> </p>
 
             </aside>
@@ -2496,8 +2500,8 @@
             <div class="footerDropdown">
                 <mat-icon class="icon" aria-hidden="false" aria-label="Languge Icon" fontIcon="language"></mat-icon>
                 <mat-label class="label">{{ 'footer.language' | translate }}</mat-label>
-                <mat-form-field class="dropdown" >
-                    <mat-select  [(value)]="languageSelected" (selectionChange)="changeLanguage($event.value)">
+                <mat-form-field class="dropdown">
+                    <mat-select [(value)]="languageSelected" (selectionChange)="changeLanguage($event.value)">
                         @for (language of languages; track language) {
                         <mat-option [value]="language.value">{{language.code}}</mat-option>
                         }
