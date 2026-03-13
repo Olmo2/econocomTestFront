@@ -1,4 +1,9 @@
 {
+  "alert": {
+    "close": "Close",
+    "failure": "Critical Error",
+    "success": "Login Successful"
+  },
   "footer": {
     "language": "LANGUAGE:"
   },

@@ -1,4 +1,9 @@
 {
+  "alert": {
+    "close": "Fechar",
+    "failure": "Erro Crítico",
+    "success": "Login Bem-Sucedido"
+  },
   "footer": {
     "language": "IDIOMA:"
   },
