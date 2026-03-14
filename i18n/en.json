@@ -1,0 +1,20 @@
+{
+  "alert": {
+    "close": "Close",
+    "failure": "Critical Error",
+    "success": "Login Successful"
+  },
+  "footer": {
+    "language": "LANGUAGE:"
+  },
+  "login": {
+    "altSubmit": "LOGIN WITH DECATHLON",
+    "email": "Email",
+    "forgot": "Don't have an account?",
+    "password": "Password",
+    "register": "Sign up",
+    "submit": "LOGIN",
+    "title": "Log in to your account",
+    "ways": "Other ways to access:"
+  }
+}
