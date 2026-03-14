@@ -2470,36 +2470,40 @@
                     fill="#16697A" />
             </svg>
             <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-                <h3>{{ 'login.title' | translate }}</h3>
+                <h3>Inicia sesión en tu cuenta</h3>
                 <mat-form-field>
-                    <mat-label>{{ 'login.email' | translate }}</mat-label>
+                    <mat-label>Correo electrónico</mat-label>
                     <input name="username" formControlName="username" matInput>
                 </mat-form-field>
                 <mat-form-field>
-                    <mat-label>{{ 'login.password' | translate }}</mat-label>
+                    <mat-label>Contraseña</mat-label>
                     <input name="password" formControlName="password" matInput
                         [type]="passwordVisible ? 'text' : 'password'">
                     <button mat-icon-button matSuffix type="button" (click)="changePasswordVisible()">
                         <mat-icon>{{ passwordVisible ? 'visibility_off' : 'visibility' }}</mat-icon>
                     </button>
                 </mat-form-field>
-                <button class="formButton" matButton="filled" style="background-color: #ff6c00;">{{ 'login.submit' |
-                    translate }}</button>
+
+                <button class="formButton" matButton="filled" style="background-color: #ff6c00;">
+                    ENTRAR
+                </button>
             </form>
 
             <aside>
-                <p>{{ 'login.ways' | translate }}
-                </p>
-                <button class="formButton" matButton="filled" style="background-color: #3643ba;">{{'login.altSubmit' |
-                    translate }}</button>
-                <p>{{ 'login.forgot' | translate }} <a href="#">{{ 'login.register' | translate }}</a> </p>
+                <p>Otras formas de acceso:</p>
 
+                <button class="formButton" matButton="filled" style="background-color: #3643ba;">
+                    ENTRAR CON DECATHLON
+                </button>
+
+                <p>¿No tienes cuenta? <a href="#">Regístrate</a></p>
             </aside>
         </div>
         <footer>
             <div class="footerDropdown">
                 <mat-icon class="icon" aria-hidden="false" aria-label="Languge Icon" fontIcon="language"></mat-icon>
-                <mat-label class="label">{{ 'footer.language' | translate }}</mat-label>
+                <mat-label class="label">IDIOMA:</mat-label>
+
                 <mat-form-field class="dropdown">
                     <mat-select [(value)]="languageSelected" (selectionChange)="changeLanguage($event.value)">
                         @for (language of languages; track language) {
@@ -2574,7 +2578,6 @@
                     </defs>
                 </svg>
             </div>
-
         </footer>
     </section>
 </main>
