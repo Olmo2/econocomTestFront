@@ -8,7 +8,7 @@
     "language": "IDIOMA:"
   },
   "login": {
-    "altSubmit": "ENTRAR COM DECATHLON",
+    "altSubmit": "ENTRAR COM SSO",
     "email": "E-mail",
     "forgot": "Não tem uma conta?",
     "password": "Senha",

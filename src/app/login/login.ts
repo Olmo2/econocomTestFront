@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { ReactiveFormsModule, Validators } from '@angular/forms';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet, Routes } from '@angular/router';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
@@ -13,6 +13,7 @@ import { TranslatePipe, TranslateDirective, TranslateService } from '@ngx-transl
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 @Component({
   selector: 'app-login',
@@ -54,7 +55,8 @@ export class Login {
     { code: 'PT', value: 'pt' },
   ];
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService,
+    private router: Router) {
     translate.use(this.languageSelected);
   }
 
@@ -91,6 +93,24 @@ export class Login {
           horizontalPosition: 'center',
           verticalPosition: 'top',
         });
+      }
+    });
+  }
+
+    onSubmitToSso() {
+
+
+    this.http.get<any>('/api/auth/sso').subscribe({
+      next: (response) => {
+        const redirectUrl = response.redirect_uri;
+        
+        this.router.navigate([redirectUrl]);
+        console.log(redirectUrl)
+      
+      },
+      error: (err) => {        
+        this.router.navigate(['/callback']);
+        console.error('Error iniciando SSO', err);
       }
     });
   }
