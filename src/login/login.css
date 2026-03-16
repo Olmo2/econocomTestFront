@@ -15,6 +15,7 @@
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   height: 100%;
+  width: 100%;
 }
 
 .logoLogin {
@@ -24,13 +25,13 @@
 }
 
 .logoLogin svg {
-  margin-left: 7vw;
+  margin-left: 7%;
   width: 80%;
   height: 100%;
 }
 
 /* Móviles */
-@media (max-width: 600px) {
+@media (max-width: 1280px) {
   .logoLogin {
    display: none;
   }
@@ -56,19 +57,19 @@
 }
 
 .formLogin svg {
-  width: 18rem;
+  width: 100%;
 }
 
 .formLogin form {
-  width: 18rem;
+  width: 100%;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 2%;
   display: flex;
   flex-direction: column;
 }
 
 .formLogin aside {
-  width: 18rem;
+  width: 100%;
   text-align: center ;
   display: flex;
   flex-direction: column;
@@ -80,7 +81,7 @@
 
 .formButton {
   border-radius: 0 !important;
-  width: 18rem;
+  width: 100%;
 }
 
 a {
@@ -99,11 +100,11 @@ footer {
 .footerDropdown {
   grid-area: 1 / 1 / 2 / 2;
   display: flex;
-  margin-left: 3rem;
+  margin-left: 6%;
 }
 
 .footerDropdown .dropdown {
-  width: 4.1rem;
+  width: 23%;
 }
 
 .footerDropdown .dropdown .mdc-notched-outline,.footerDropdown .dropdown .mdc-line-ripple {
@@ -120,16 +121,16 @@ footer {
 }
 
 .footerDropdown .label {
-  padding-top: 1.2rem;
+  padding-top: 6%;
 }
 
 .footerDropdown .icon {
-  padding-top: 1.2rem;
-  padding-right: .3rem;
+  padding-top: 5.5%;
+  padding-right: .3%;
 }
 
 .footerImg {
   grid-area: 1 / 3 / 2 / 4;
-  padding-top: 1.2rem;
-  padding-left: 2.5rem;
+  padding-left: 2.5%;
+  margin-right: 7%;
 }

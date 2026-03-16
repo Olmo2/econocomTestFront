@@ -16,7 +16,7 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login',
-  imports: [RouterOutlet,
+  imports: [
     MatDividerModule,
     MatFormFieldModule,
     MatSelectModule,
@@ -25,7 +25,6 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
     MatIconModule,
     ReactiveFormsModule,
     TranslatePipe,
-    TranslateDirective,
     CommonModule,
     MatSnackBarModule],
   templateUrl: './login.html',
